@@ -67,3 +67,6 @@ noeviction：不删除任意数据(但redis还会根据引用计数器进行释�
 
  #### AOF
  AOF通过的是append方法对写操作进行持久化
+
+
+ ## Spring 相关
