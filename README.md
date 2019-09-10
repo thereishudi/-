@@ -2,6 +2,51 @@
 
  ## Java基础
 
+ ### CAS操作
+ 旧值  新值  修改值
+
+
+
+
+
+ 缺点：
+  1. 循环时间长，开销很大（因为有个while循环）
+  2. 只能保证一个共享变量原子操作
+  3. ABA问题
+
+
+
+  ### Java线程池
+
+  #### Excutors 通用线程池去创建不同的线程池
+
+  Callable弥补了Runnble无法返回结果的短板
+
+  Excutors下面有五个不同的线程池
+
+  启动接口为excute
+
+  #### J.U.C包下面的三个Excutor接口
+
+  - Excutor：运行新任务的简单接口
+  - ExcutorService：具备管理执行期和任务生命周期的方法，提交任务机制更加完善
+  - ScheduledExcutorService:支持定期执行任务
+
+  #### threadPoolExcutor
+  ![最重要的线程池](assets/markdown-img-paste-20190910105251363.png)
+
+
+
+**TreadPoolExcutor构造函数：**
+- 核心线程数
+- 最大线程数
+- 等待队列大小
+- 线程池维护线程的等待时间
+- 创建新线程
+- 线程池饱和策略
+
+
+
  ### HashMap
 
  #### ConcurrentHashMap
